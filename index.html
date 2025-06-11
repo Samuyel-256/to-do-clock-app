@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do + Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <h1>🕒 To-Do List + Clock ⏰</h1>
+
+    <div class="clock" id="clock">00:00:00</div>
+
+    <div class="task-input">
+      <input type="text" id="taskTitle" placeholder="Enter your task" />
+      <textarea id="taskDesc" placeholder="Description (optional)"></textarea>
+      <input type="datetime-local" id="taskTime" />
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()" />
+            <span class="slider"></span>
+         </label>
+        <span>🌙 Dark Mode</span>
+    </div>
+
+
+    <h2>Your Tasks</h2>
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
